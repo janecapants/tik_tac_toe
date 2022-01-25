@@ -4,7 +4,7 @@ const Square = ({id, player, newState}) => {
   const [color, setColor] = React.useState('');
   const [status, setStatus] = React.useState(null);
   const xo = ['O', 'X'];
-  const palet = ['orange', 'green', 'purple'];
+  const palet = ['orange', 'blue', 'purple'];
   const getRandomColor = () => palet [Math.floor (Math.random()*3)];
 
   React.useEffect(() => {
@@ -16,7 +16,7 @@ const Square = ({id, player, newState}) => {
     <button  onClick={(e) => { 
       let col = getRandomColor();
       setColor(col);
-      let nextPlayer = newState({id:id, color:col});
+      let nextPlayer = newState(id);
       setStatus(nextPlayer);
       e.target.style.background = col;
     }}> 
@@ -32,27 +32,6 @@ const Board = () => {
   const [mounted, setMounted] = React.useState(true);
   const [random, setRandom] = React.useState(0);
   const[state, setState] = React.useState(Array(9).fill(null));
-
-  let status = `Player ${player}`;
-  let winner = checkWinner(state);
-  if(winner != null) status = `Player ${winner} wins!`
-
-  const newState = idOfSquare =>{
-    let thePlayer= player
-    state[idOfSquare] = player;
-    let nextplayer =(player + 1)%2;
-    setPlayer(nextplayer);
-    setState(state);
-    console.log(`adding state ${JSON.stringify(state)}`);
-    status = `Player ${nextplayer}`;
-    return thePlayer;
-  }
-
-  const toggle = () => setMounted(!mounted);
-  const reRender = () => setRandom(Math.random());
-  function renderSquare(i) {
-    return <Square id={i} player={player} newState={newState}></Square>
-  }
 
   function checkWinner(state){
 
@@ -74,6 +53,26 @@ const Board = () => {
     }
     return null;
 }
+
+  let status = `Player ${player}`;
+  let winner = checkWinner(state);
+  if(winner != null) status = `Player ${winner} wins!`
+
+  const newState = idOfSquare =>{
+    let thePlayer = player
+    state[idOfSquare] = player;
+    setState(state);
+    let nextplayer =(player + 1)%2;
+    setPlayer(nextplayer);
+
+    return thePlayer;
+  }
+
+  const toggle = () => setMounted(!mounted);
+  const reRender = () => setRandom(Math.random());
+  function renderSquare(i) {
+    return <Square id={i} player={player} newState={newState}></Square>
+  }
 
 
   return (
