@@ -56,7 +56,7 @@ const Board = () => {
 
   let status = `Player ${player}`;
   let winner = checkWinner(state);
-  if(winner != null) status = `Player ${winner} wins!`
+  if(winner != null) status = `Player ${winner} is the winner!! Hooray!!!`
 
   const newState = idOfSquare =>{
     let thePlayer = player
