@@ -2,10 +2,10 @@
 ## This project shows a tic tac toe game.
 
 ## Description
-### Click the box in the upper left hand corner that says "Show bus stops along Central Park West" and the tracker will move to the stops the bus makes. I changed the color of the button and the text contained inside the button. I added a shadow to the box and outlined the text as well. I wanted the colors to match some of those on the map. 
+### Player 1 goes first, click on any square and it will show an "X". Then it is Player 0's turn and any square they click on will show an "O". Continue until one player gets 3 in a row and it will show "Player _ wins!" at the bottom of the screen. The background is an image uploaded from google.
 
 ## How to run it.
 ### You must download the zip file. Then open up a terminal path and open the HTML file. 
 
 ## Furture Improvements
-### I'd like to make it more specific so users would know the exact location by hovering over the location marker. 
+### I would like to make the text a little more flashy. I would also like to make the background color of the tiles into images. When the player wins I would like the text to become animated.
