@@ -8,4 +8,4 @@
 ### You must download the zip file. Then open up a terminal path and open the HTML file. 
 
 ## Furture Improvements
-### I would like to make the text a little more flashy. I would also like to make the background color of the tiles into images. When the player wins I would like the text to become animated.
+### I would like to make the text a little more flashy. I would also like to make the background color of the tiles into images. When the player wins I would like the text to become animated. Finally,  I would add a 'Try Again' button for when you want to restart the game.
