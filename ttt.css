@@ -1,0 +1,50 @@
+h1{
+    text-align: center;
+    color: white;
+    font-family: Optima, sans-serif;
+    
+}
+
+button {
+    background-color: turquoise;
+    border: 6px solid darkblue;
+    border-radius: 10px;
+  }
+  .game-board {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background-color:darkblue;
+    color: white;
+    border: 10px solid lightgreen;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .grid-row {
+    border: 6px solid #739dc7;
+    border-radius: 6px;
+    font-family: Optima, sans-serif;
+    font-weight: bold;
+    font-size: 4em;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: white;
+  }
+  .block {
+    background-color: rgb(219, 28, 28);
+    border: 6px solid green;
+    border-radius: 6px;
+    font-family: Optima, sans-serif;
+    font-weight: bold;
+    font-size: 20em;
+  }
+
+  body{
+      background:url("3arcade.jpg")
+    
+      
+  }
